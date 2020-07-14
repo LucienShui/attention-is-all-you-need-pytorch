@@ -1,14 +1,13 @@
-''' Define the Layers '''
+""" Define the Layers """
 import torch.nn as nn
-import torch
-from transformer.SubLayers import MultiHeadAttention, PositionwiseFeedForward
 
+from transformer.SubLayers import MultiHeadAttention, PositionwiseFeedForward
 
 __author__ = "Yu-Hsiang Huang"
 
 
 class EncoderLayer(nn.Module):
-    ''' Compose with two layers '''
+    """ Compose with two layers """
 
     def __init__(self, d_model, d_inner, n_head, d_k, d_v, dropout=0.1):
         super(EncoderLayer, self).__init__()
@@ -23,7 +22,7 @@ class EncoderLayer(nn.Module):
 
 
 class DecoderLayer(nn.Module):
-    ''' Compose with three layers '''
+    """ Compose with three layers """
 
     def __init__(self, d_model, d_inner, n_head, d_k, d_v, dropout=0.1):
         super(DecoderLayer, self).__init__()
