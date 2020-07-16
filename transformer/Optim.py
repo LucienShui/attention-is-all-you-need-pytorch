@@ -1,7 +1,7 @@
 """A wrapper class for scheduled optimizer """
 
 
-class ScheduledOptim():
+class ScheduledOptim:
     """A simple wrapper class for learning rate scheduling"""
 
     def __init__(self, optimizer, init_lr, d_model, n_warmup_steps):

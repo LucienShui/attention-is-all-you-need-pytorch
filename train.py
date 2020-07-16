@@ -144,10 +144,11 @@ def train(model, training_data, validation_data, optimizer, device, opt):
             log_vf.write('epoch,loss,ppl,accuracy\n')
 
     def print_performances(header, loss, accu, start_time):
-        print('  - {header:12} ppl: {ppl: 8.5f}, accuracy: {accu:3.3f} %, ' \
-              'elapse: {elapse:3.3f} min'.format(
-            header=f"({header})", ppl=math.exp(min(loss, 100)),
-            accu=100 * accu, elapse=(time.time() - start_time) / 60))
+        print('  - {header:12} ppl: {ppl: 8.5f}, accuracy: {accu:3.3f} %, '
+              'elapse: {elapse:3.3f} min'.format(header=f"({header})",
+                                                 ppl=math.exp(min(loss, 100)),
+                                                 accu=100 * accu,
+                                                 elapse=(time.time() - start_time) / 60))
 
     # valid_accus = []
     valid_losses = []

@@ -8,7 +8,7 @@ from transformer.Layers import EncoderLayer, DecoderLayer
 __author__ = "Yu-Hsiang Huang"
 
 
-def get_pad_mask(seq, pad_idx):
+def get_pad_mask(seq: torch.Tensor, pad_idx: torch.Tensor) -> torch.Tensor:
     return (seq != pad_idx).unsqueeze(-2)
 
 
